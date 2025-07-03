@@ -1,0 +1,18 @@
+# fastapi
+# uvicorn[standard]
+# httpx
+# pydantic
+# python-dotenv
+
+# supabase
+# bandit
+# gitpython
+
+# # Optional: async background jobs
+# celery
+# redis
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+supabase
