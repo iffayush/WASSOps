@@ -30,7 +30,7 @@ cmd = [
 print("Running command:", " ".join(cmd))
 
 try:
-    result = subprocess.run(cmd, timeout=600, capture_output=True, text=True)
+    result = subprocess.run(cmd, timeout=1200, capture_output=True, text=True)
     print("STDOUT:\n", result.stdout)
     print("STDERR:\n", result.stderr)
 
