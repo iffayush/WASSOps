@@ -10,9 +10,12 @@ from supabase import create_client
 load_dotenv()
 
 app = FastAPI()
+origins = [
+    "https://wass-ebon.vercel.app"
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://3.111.40.124:3000"],
+    allow_origins=origins,  # or use ["*"] for development only
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
