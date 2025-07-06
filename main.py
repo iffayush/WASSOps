@@ -53,13 +53,11 @@ async def start_scan(data: ScanRequest):
     # Launch scanner.py as background subprocess
     print("Launching scanner.py...", flush=True)
     try:
-        subprocess.run([
-            "python", "scanner.py",
-            str(scan_id),
-            str(data.user_id),
-            str(data.project_id),
-            data.url
-        ])
+        subprocess.Popen(
+        ["python3", "scanner.py", scan_id, str(data.user_id), str(data.project_id), str(data.url)],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL
+    )
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to start scan: {e}")
