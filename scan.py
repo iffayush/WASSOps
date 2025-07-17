@@ -14,7 +14,7 @@ def run_nuclei_scan(target: str):
             capture_output=True,
             text=True,
             check=True,
-            timeout=600
+            timeout=1800
         )
         
         print("NUCLEI STDOUT:", result.stdout)
